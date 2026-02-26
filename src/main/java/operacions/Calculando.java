@@ -137,11 +137,6 @@ public class Calculando extends javax.swing.JFrame {
 
         bpor.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bpor.setText("x");
-        bpor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bporActionPerformed(evt);
-            }
-        });
         botonera.add(bpor);
 
         b7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -173,20 +168,10 @@ public class Calculando extends javax.swing.JFrame {
 
         bentre.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bentre.setText("/");
-        bentre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bentreActionPerformed(evt);
-            }
-        });
         botonera.add(bentre);
 
         bmas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bmas.setText("+");
-        bmas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bmasActionPerformed(evt);
-            }
-        });
         botonera.add(bmas);
 
         b0.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -200,11 +185,6 @@ public class Calculando extends javax.swing.JFrame {
 
         bmenos.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bmenos.setText("-");
-        bmenos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bmenosActionPerformed(evt);
-            }
-        });
         botonera.add(bmenos);
 
         bigual.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -319,42 +299,6 @@ public class Calculando extends javax.swing.JFrame {
     private void bCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCActionPerformed
         pantalla.setText("0");
     }//GEN-LAST:event_bCActionPerformed
-
-    private void bmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bmasActionPerformed
-        if(pantalla.getText().equals("0")){
-            pantalla.setText("+");
-        }else{
-            pantalla.setText(pantalla.getText() + "+");
-        }
-        operacion = '+';
-    }//GEN-LAST:event_bmasActionPerformed
-
-    private void bmenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bmenosActionPerformed
-        if(pantalla.getText().equals("0")){
-            pantalla.setText("-");
-        }else{
-            pantalla.setText(pantalla.getText() + "-");
-        }
-        operacion = '-';
-    }//GEN-LAST:event_bmenosActionPerformed
-
-    private void bporActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bporActionPerformed
-        if(pantalla.getText().equals("0")){
-            pantalla.setText("x");
-        }else{
-            pantalla.setText(pantalla.getText() + "x");
-        }
-        operacion = 'x';
-    }//GEN-LAST:event_bporActionPerformed
-
-    private void bentreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bentreActionPerformed
-        if(pantalla.getText().equals("0")){
-            pantalla.setText("/");
-        }else{
-            pantalla.setText(pantalla.getText() + "/");
-        }
-        operacion = '/';
-    }//GEN-LAST:event_bentreActionPerformed
 
     /**
      * @param args the command line arguments
