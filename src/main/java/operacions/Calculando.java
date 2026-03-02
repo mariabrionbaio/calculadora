@@ -1,15 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package operacions;
 
-/**
- *
- * @author mbdorca
- */
 public class Calculando extends javax.swing.JFrame {
-    char operacion = '=';
+    char operacion = '0';
+    int op1;
+    int op2;
+    boolean result = false;
     /**
      * Creates new form Calculando
      */
@@ -137,6 +132,11 @@ public class Calculando extends javax.swing.JFrame {
 
         bpor.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bpor.setText("x");
+        bpor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bporActionPerformed(evt);
+            }
+        });
         botonera.add(bpor);
 
         b7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -168,10 +168,20 @@ public class Calculando extends javax.swing.JFrame {
 
         bentre.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bentre.setText("/");
+        bentre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bentreActionPerformed(evt);
+            }
+        });
         botonera.add(bentre);
 
         bmas.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bmas.setText("+");
+        bmas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bmasActionPerformed(evt);
+            }
+        });
         botonera.add(bmas);
 
         b0.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -185,10 +195,20 @@ public class Calculando extends javax.swing.JFrame {
 
         bmenos.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bmenos.setText("-");
+        bmenos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bmenosActionPerformed(evt);
+            }
+        });
         botonera.add(bmenos);
 
         bigual.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bigual.setText("=");
+        bigual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bigualActionPerformed(evt);
+            }
+        });
         botonera.add(bigual);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -217,88 +237,143 @@ public class Calculando extends javax.swing.JFrame {
 
 
     private void b1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b1ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("1");
         }else{
             pantalla.setText(pantalla.getText() + "1");
         }
+        result = false;
     }//GEN-LAST:event_b1ActionPerformed
 
     private void b2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b2ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("2");
         }else{
             pantalla.setText(pantalla.getText() + "2");
         }
+        result = false;
     }//GEN-LAST:event_b2ActionPerformed
 
     private void b3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b3ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("3");
         }else{
             pantalla.setText(pantalla.getText() + "3");
         }
+        result = false;
     }//GEN-LAST:event_b3ActionPerformed
 
     private void b4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b4ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("4");
         }else{
             pantalla.setText(pantalla.getText() + "4");
         }
+        result = false;
     }//GEN-LAST:event_b4ActionPerformed
 
     private void b5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b5ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("5");
         }else{
             pantalla.setText(pantalla.getText() + "5");
         }
+        result = false;
     }//GEN-LAST:event_b5ActionPerformed
 
     private void b6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b6ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("6");
         }else{
             pantalla.setText(pantalla.getText() + "6");
         }
+        result = false; 
     }//GEN-LAST:event_b6ActionPerformed
 
     private void b7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b7ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("7");
         }else{
             pantalla.setText(pantalla.getText() + "7");
         }
+        result = false; 
     }//GEN-LAST:event_b7ActionPerformed
 
     private void b8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b8ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("8");
         }else{
             pantalla.setText(pantalla.getText() + "8");
         }
+        result = false;
     }//GEN-LAST:event_b8ActionPerformed
 
     private void b9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b9ActionPerformed
-       if(pantalla.getText().equals("0")){
+       if(pantalla.getText().equals("0") || result){
             pantalla.setText("9");
         }else{
             pantalla.setText(pantalla.getText() + "9");
         }
+       result = false;
     }//GEN-LAST:event_b9ActionPerformed
 
     private void b0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b0ActionPerformed
-        if(pantalla.getText().equals("0")){
+        if(pantalla.getText().equals("0") || result){
             pantalla.setText("0");
         }else{
             pantalla.setText(pantalla.getText() + "0");
         }
+        result = false;
     }//GEN-LAST:event_b0ActionPerformed
 
     private void bCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCActionPerformed
+        operacion = '0';
+        op1 = 0;
+        op2 = 0;
         pantalla.setText("0");
+        result = false;
     }//GEN-LAST:event_bCActionPerformed
+
+    private void bporActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bporActionPerformed
+        op1 = Integer.parseInt(pantalla.getText());
+        operacion = '*';
+        pantalla.setText("");
+        result = false;
+    }//GEN-LAST:event_bporActionPerformed
+
+    private void bentreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bentreActionPerformed
+        op1 = Integer.parseInt(pantalla.getText());
+        operacion = '/';
+        pantalla.setText("");
+        result = false;
+    }//GEN-LAST:event_bentreActionPerformed
+
+    private void bmasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bmasActionPerformed
+        op1 = Integer.parseInt(pantalla.getText());
+        operacion = '+';
+        pantalla.setText("");
+        result = false;
+    }//GEN-LAST:event_bmasActionPerformed
+
+    private void bmenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bmenosActionPerformed
+        op1 = Integer.parseInt(pantalla.getText());
+        operacion = '-';
+        pantalla.setText("");
+        result = false;
+    }//GEN-LAST:event_bmenosActionPerformed
+
+    private void bigualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bigualActionPerformed
+        if(operacion == '0'){
+            pantalla.setText(pantalla.getText());
+        }else if(operacion == '+' || operacion == '-' || operacion == '*' || operacion == '/'){
+            op2 = Integer.parseInt(pantalla.getText());
+        }
+        pantalla.setText(Integer.toString(calcular(op1, op2, operacion)));
+        operacion = '0';
+        op1 = 0;
+        op2 = 0;
+        result = true;
+    }//GEN-LAST:event_bigualActionPerformed
 
     /**
      * @param args the command line arguments
@@ -334,6 +409,17 @@ public class Calculando extends javax.swing.JFrame {
             }
         });
     }
+   
+        int calcular(int op1, int op2, char operacion){
+        switch(operacion){
+            case '+':   return op1 + op2;
+            case '-':   return op1 - op2;
+            case '*':   return op1 * op2;
+            case '/':   return op1 / op2;
+            default:    return 0;
+        }
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton b0;
